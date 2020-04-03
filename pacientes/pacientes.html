@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Menos Kilos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Panel Menos Kilos" name="description" />
+        <meta content="MK" name="Donovan / Gil" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+        <!-- DataTables -->
+        <link href="../assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="../assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />  
+       
+
+        <!-- App css -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="javascript: void(0);" class="logo">
+                    <span>
+                        <img src="../assets/images/menoskiloslogo.png" alt="logo-large" class="logo-lg">
+                    </span>                    
+                </a>
+            </div>
+            <!--end logo-->
+            <!-- Navbar -->
+            <nav class="navbar-custom">    
+                <ul class="list-unstyled topbar-nav float-right mb-0">                     
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <img src="../assets/images/users/user-4.jpg" alt="profile-user" class="rounded-circle" /> 
+                            <span class="ml-1 nav-user-name hidden-sm">Nutriologa <i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">                            
+                            <a class="dropdown-item" href="#"><i class="dripicons-exit text-muted mr-2"></i> Cerrar sesion</a>
+                        </div>
+                    </li>
+                </ul><!--end topbar-nav-->
+            </nav>
+            <!-- end navbar-->
+        </div>
+        <!-- Top Bar End -->
+
+        <div class="page-wrapper">
+            <!-- Left Sidenav -->
+            <div class="left-sidenav">
+                <ul class="metismenu left-sidenav-menu">
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="dripicons-heart"></i><span>Inicio</span><i class="mdi mdi-chevron-right"></i></span></a>                        
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="far fa-address-book"></i><span>Pacientes</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="../pacientes/pacientes.html"><i class="ti-control-record"></i>Agenda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../pacientes/pacientes-nuevo.html"><i class="ti-control-record"></i>Nuevo</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="far fa-calendar-alt"></i><span>Consultas</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span>                            
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="../consultas/calendario.html"><i class="ti-control-record"></i>Calendario</a></li>                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-shopping-cart-full"></i><span>Catalogo</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="../catalogo/inventario.html"><i class="ti-control-record"></i>Inventario</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../catalogo/agrega-stock.html"><i class="ti-control-record"></i>Nuevo Producto</a></li>                                                      
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="fas fa-money-bill-wave"></i><span>Gastos</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="../gastos/gasto-nuevo.html"><i class="ti-control-record"></i>Nuevo Gasto</a></li>                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="dripicons-graph-pie"></i><span>Reportes</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="../gastos/reporte-general.html"><i class="ti-control-record"></i>General</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../gastos/reporte-detalle.html"><i class="ti-control-record"></i>Detalles</a></li>
+                        </ul>                    
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i class="mdi mdi-shield-key"></i><span>Admin</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="../admin/admin-consultas.html"><i class="ti-control-record"></i>Consultas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../admin/admin-usuarios.html"><i class="ti-control-record"></i>Usuarios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../admin/admin-password.html"><i class="ti-control-record"></i>Contraseña</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../admin/admin-catalogo.html"><i class="ti-control-record"></i>Catalogo</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../admin/admin-paquetes.html"><i class="ti-control-record"></i>Paquetes</a></li>                            
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- end left-sidenav-->
+
+            <!-- Page Content-->
+            <div class="page-content">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-right">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Panel</a></li>
+                                        <li class="breadcrumb-item">Pacientes</a></li>                                        
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Pacientes</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">                                    
+                                    <h4 class="header-title mt-0">Contacts Details</h4> 
+                                    <div class="table-responsive dash-social">
+                                        <table id="datatable" class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Customer Name</th>
+                                                <th>Email</th>
+                                                <th>Phone No</th>  
+                                                <th>Lead  Score</th>                                                  
+                                                <th>Company</th>
+                                                <th>Tags</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                            </thead>
+        
+                                            <tbody>
+                                            <tr>
+                                                <td><img src="../assets/images/users/user-10.jpg" alt="" class="thumb-sm rounded-circle mr-2">Donald Gardner<small class="badge badge-soft-pink ml-1">New</small></td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>68</td>
+                                                <td>Starbucks coffee</td>
+                                                <td>
+                                                    <span class="badge badge-md badge-soft-success">test</span>
+                                                    <span class="badge badge-md badge-soft-success">another</span>
+                                                </td>
+                                                <td>                                                       
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="../assets/images/users/user-9.jpg" alt="" class="thumb-sm rounded-circle mr-2">Matt Rosales</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>112</td>
+                                                <td>Mac Donald</td>
+                                                <td>
+                                                    <span class="badge badge-md badge-soft-success">test</span>
+                                                    <span class="badge badge-md badge-soft-success">another</span>
+                                                    <span class="badge badge-md badge-soft-success">something</span>
+                                                </td>
+                                                <td>                                                       
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="../assets/images/users/user-8.jpg" alt="" class="thumb-sm rounded-circle mr-2">Michael Hill<small class="badge badge-soft-blue ml-1">New</small></td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>64</td>
+                                                <td>Life Good</td>
+                                                <td>
+                                                    <span class="badge badge-md badge-soft-success">test</span>
+                                                    <span class="badge badge-md badge-soft-success">another</span>
+                                                </td>
+                                                <td>                                                       
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="../assets/images/users/user-7.jpg" alt="" class="thumb-sm rounded-circle mr-2">Nancy Flanary</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>124</td>
+                                                <td>Flipcart</td>
+                                                <td>
+                                                    <span class="badge badge-md badge-soft-success">test</span>
+                                                    <span class="badge badge-md badge-soft-success">another</span>
+                                                    <span class="badge badge-md badge-soft-success">something</span>
+                                                </td>
+                                                <td>                                                       
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="../assets/images/users/user-6.jpg" alt="" class="thumb-sm rounded-circle mr-2">Dorothy Key</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>33</td>
+                                                <td>Adidas</td>
+                                                <td>
+                                                    <span class="badge badge-md badge-soft-success">test</span>
+                                                    <span class="badge badge-md badge-soft-success">something</span>
+                                                </td>                                               
+                                                <td>                                                       
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="../assets/images/users/user-5.jpg" alt="" class="thumb-sm rounded-circle mr-2">Joseph Cross</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>84</td>
+                                                <td>Reebok</td>
+                                                <td>
+                                                    <span class="badge badge-md badge-soft-success">test</span>
+                                                    <span class="badge badge-md badge-soft-success">another</span>
+                                                    <span class="badge badge-md badge-soft-success">something</span>
+                                                </td>
+                                                <td>                                                       
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                                                                            
+                                            </tbody>
+                                        </table>                    
+                                    </div>                                         
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->                               
+                    </div><!--end row-->     
+
+                </div><!-- container -->
+
+                <footer class="footer text-center text-sm-left">
+                    &copy; 2020 Menos Kilos <i class="mdi mdi-heart text-danger"></i> 
+                </footer><!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!-- jQuery  -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/metisMenu.min.js"></script>
+        <script src="../assets/js/waves.min.js"></script>
+        <script src="../assets/js/jquery.slimscroll.min.js"></script>
+
+        <script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="../assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- App js -->
+        <script src="../assets/js/app.js"></script>
+        <script>
+            // Datatable
+            $('#datatable').DataTable();
+        </script>
+
+    </body>
+</html>
