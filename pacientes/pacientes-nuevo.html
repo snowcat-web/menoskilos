@@ -12,16 +12,18 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/mkicon.ico"> 
 
-        <!-- DataTables -->
-        <link href="../assets/plugins/jsgrid/jsgrid.min.css" rel="stylesheet">
-        <link href="../assets/plugins/jsgrid/jsgrid-theme.min.css" rel="stylesheet">
-       
-
         <!-- App css -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <!-- Plugins css -->
+        <link href="../assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+        <link href="../assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/plugins/timepicker/bootstrap-material-datetimepicker.css" rel="stylesheet">
+        <link href="../assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
 
     </head>
 
@@ -132,23 +134,83 @@
                                 <div class="float-right">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="javascript:void(0);">Panel</a></li>
-                                        <li class="breadcrumb-item">Pacientes</a></li>                                        
+                                        <li class="breadcrumb-item">Nuevo Paciente</a></li>                                        
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Pacientes</h4>
+                                <h4 class="page-title">Nuevo Paciente</h4>
                             </div><!--end page-title-box-->
                         </div><!--end col-->
                     </div>
                     <!-- end page title end breadcrumb -->
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-lg-8">
                             <div class="card">
+                                <h5 class="card-header bg-secondary text-white mt-0">Datos de Paciente</h5>
                                 <div class="card-body">
-                                    <div id="jsGrid"></div>
-                                </div><!--end card-body-->
-                            </div><!--end card-->
-                        </div><!--end col-->
-                    </div><!--end row-->
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">Nombre</label>
+                                                <input type="text" class="form-control" id="pacienteNombre" placeholder="" value="" required>                                                
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">Apellido</label>
+                                                <input type="text" class="form-control" id="pacienteApellido" placeholder="" value="" required>                                                
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">Correo</label>
+                                                <input type="text" class="form-control" id="pacienteCorreo" placeholder="" value="" required>                                                
+                                            </div>
+                                            <!--end col-->
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationCustom01">Telefono</label>
+                                                <input type="text" class="form-control" id="pacienteNombre" placeholder="" value="" required>                                                
+                                            </div>
+                                            <div class="col-md-8 mb-3">
+                                                <label for="validationCustom01">Direccion</label>
+                                                <input type="text" class="form-control" id="pacienteApellido" placeholder="" value="" required>                                                
+                                            </div>                                           
+
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-2 mb-3">
+                                                <label>Referencia</label>
+                                            </div>
+                                            <div class="col-sm-3 mb-3">
+                                                <select class="custom-select">
+                                                    <option selected=""></option>
+                                                    <option value="1">Facebook</option>
+                                                    <option value="2">Recomendado</option>
+                                                    <option value="3">Internet</option>
+                                                    <option value="4">Google</option>
+                                                    <option value="5">Vi el local</option>
+                                                    <option value="6">Doctoralia</option>
+                                                    <option value="6">Pagina</option>
+                                                    <option value="6">Publicidad</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-3 mb-3">
+                                                <label>Fecha de nacimiento</label>                                                
+                                            </div>
+                                            <div class="col-sm-3 mb-3">
+                                                <div class="input-group">                                            
+                                                    <input type="text" class="form-control" name="birthday" value="10/24/1984">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="dripicons-calendar"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- </div> -->
+                                        </div>
+                                        <button class="btn btn-gradient-primary" type="submit" >Guardar</button>
+                                    </form>                            
+                                </div>
+                            </div>
+                            
+                            </div>
+                            </div>
 
                 </div><!-- container -->
 
@@ -167,18 +229,24 @@
         <script src="../assets/js/waves.min.js"></script>
         <script src="../assets/js/jquery.slimscroll.min.js"></script>
 
-        <script src="../assets/plugins/jsgrid/jsgrid.min.js"></script>
-        <script src="../assets/plugins/jsgrid/db.js"></script>
-        <script src="../assets/pages/jquery.jsgrid.init.js"></script>
+        <!-- Validation js -->        
+        <script src="../assets/js/jquery.core.js"></script>
+
+        <script src="../assets/plugins/moment/moment.js"></script>
+        <script src="../assets/plugins/daterangepicker/daterangepicker.js"></script>
+        <script src="../assets/plugins/select2/select2.min.js"></script>
+        <script src="../assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+        <script src="../assets/plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+        <script src="../assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+        <script src="../assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+        <script src="../assets/pages/jquery.forms-advanced.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.js"></script>
-        <script src="../pacientes/pacientes.js"></script>
-        <script src="pacientescontroller.js"></script>     
-        <!-- <script>
-            // Datatable
-            $('#datatable').DataTable();
-        </script> -->
+        <script src="../assets/js/app.js"></script>        
+
+        <script src="pacientescontroller.js"></script>    
+        
 
     </body>
 </html>
